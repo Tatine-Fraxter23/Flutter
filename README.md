@@ -6,7 +6,8 @@
 
 This project is a starting point for a Flutter application. This Flutter application development is a pitch for ICCT's traditional way of tracking attendance.
 With the help of this application's development, improvement in attendance tracking in ICCT is ensured. The goal of this development is to make an efficient and modern approach of recording student attendance without being prone to errors.
-A few resources to get you started if this is your first Flutter project:
+
+This developing application is being made with Flutter. A few resources to get you started if this is your first Flutter project:
 
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
