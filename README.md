@@ -1,8 +1,8 @@
 # Flutter Capstone
 ## Attendance Application
-* Version: 2025.4.24
-* Status: On Going
-* Developers: [Fraxter23](https://github.com/Tatine-Fraxter23), [Jideeh1](https://github.com/Jideeh1)
+* **Version**: 2025.4.24
+* **Status**: On Going
+* **Developers**: [Fraxter23](https://github.com/Tatine-Fraxter23), [Jideeh1](https://github.com/Jideeh1)
 
 This project is a starting point for a Flutter application. This Flutter application development is a pitch for ICCT's traditional way of tracking attendance.
 With the help of this application's development, improvement in attendance tracking in ICCT is ensured. The goal of this development is to make an efficient and modern approach of recording student attendance without being prone to errors.
