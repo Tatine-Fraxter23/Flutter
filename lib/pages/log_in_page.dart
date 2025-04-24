@@ -1,12 +1,16 @@
+// ignore_for_file: library_private_types_in_public_api, camel_case_types, use_build_context_synchronously
+
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-class LoginPage extends StatefulWidget {
+class log_in_page extends StatefulWidget {
+  const log_in_page({super.key});
+
   @override
   _LoginPageState createState() => _LoginPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _LoginPageState extends State<log_in_page> {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
 

@@ -1,8 +1,12 @@
+// ignore_for_file: camel_case_types, use_build_context_synchronously
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:my_apps/main.dart';
+import 'package:my_app/main.dart';
 
-class HomePage extends StatelessWidget {
+class home_page extends StatelessWidget {
+  const home_page({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

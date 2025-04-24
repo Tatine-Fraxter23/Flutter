@@ -2,10 +2,11 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'pages/log_in_page.dart';
 import 'firebase_options.dart';
-import 'pages/HomePage.dart';
-import 'pages/LoginPage.dart';
-import 'pages/SignUpPage.dart';
+import 'pages/home_page.dart';
+import 'pages/sign_up_page.dart';
+import 'pages/log_in_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -14,6 +15,8 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -24,9 +27,9 @@ class MyApp extends StatelessWidget {
       ),
       home: SplashScreen(), // Keep SplashScreen as the home
       routes: {
-        '/login': (context) => LoginPage(),
-        '/signup': (context) => SignUpPage(),
-        '/home': (context) => HomePage(),
+        '/login': (context) => log_in_page(),
+        '/signup': (context) => sign_up_page(),
+        '/home': (context) => home_page(),
       },
       debugShowCheckedModeBanner: false,
     );
@@ -34,6 +37,8 @@ class MyApp extends StatelessWidget {
 }
 
 class SplashScreen extends StatelessWidget {
+  const SplashScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<User?>(
@@ -42,7 +47,7 @@ class SplashScreen extends StatelessWidget {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return Scaffold(body: Center(child: CircularProgressIndicator()));
         } else if (snapshot.hasData) {
-          return HomePage();
+          return home_page();
         } else {
           return Scaffold(
             body: Center(
@@ -61,7 +66,7 @@ class SplashScreen extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 100),
-                    new SizedBox(
+                    SizedBox(
                       width: 300.0,
                       height: 35.0,
                       child: ElevatedButton(
@@ -71,7 +76,7 @@ class SplashScreen extends StatelessWidget {
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (_) => LoginPage()),
+                            MaterialPageRoute(builder: (_) => log_in_page()),
                           );
                         },
                         child: Text(
@@ -86,14 +91,14 @@ class SplashScreen extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 15),
-                    new SizedBox(
+                    SizedBox(
                       width: 300.0,
                       height: 35.0,
                       child: ElevatedButton(
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (_) => SignUpPage()),
+                            MaterialPageRoute(builder: (_) => sign_up_page()),
                           );
                         },
                         child: Text(
