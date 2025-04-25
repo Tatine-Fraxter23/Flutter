@@ -4,7 +4,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'pages/log_in_page.dart';
 import 'firebase_options.dart';
-import 'pages/home_page.dart';
+import 'pages/HomePage.dart';
 import 'pages/sign_up_page.dart';
 
 void main() async {
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/login': (context) => log_in_page(),
         '/signup': (context) => sign_up_page(),
-        '/home': (context) => home_page(),
+        '/home': (context) => HomePage(),
       },
       debugShowCheckedModeBanner: false,
     );
@@ -46,7 +46,7 @@ class SplashScreen extends StatelessWidget {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return Scaffold(body: Center(child: CircularProgressIndicator()));
         } else if (snapshot.hasData) {
-          return home_page();
+          return HomePage();
         } else {
           return Scaffold(
             body: Center(
