@@ -4,8 +4,9 @@
 * **Status**: On Going
 * **Developers**: [Fraxter23](https://github.com/Tatine-Fraxter23), [Jideeh1](https://github.com/Jideeh1)
 
-This project is a starting point for a Flutter application. This Flutter application development is a pitch for ICCT's traditional way of tracking attendance.
-With the help of this application's development, improvement in attendance tracking in ICCT is ensured. The goal of this development is to make an efficient and modern approach of recording student attendance without being prone to errors.
+This project is a starting point for a Flutter application. 
+
+This in-development application is an attempt of innovation to restructure ICCT's traditional attendance tracking system. By leveraging technology, our goal is to replace the traditional ways of recording attendance by hand with a more efficient and reliable approach. The development of this application reduces the susceptibility to errors, and boosts the accuracy and consistency of recording attendance. With added features for ICCT to leverage, we have added a scheduler in this application's calendar system, along with report cards and its document generation.
 
 This developing application is being made with Flutter. A few resources to get you started if this is your first Flutter project:
 
