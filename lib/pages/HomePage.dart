@@ -178,6 +178,7 @@ class CalendarShenanigan extends StatefulWidget {
 
 class _CalendarShenaniganState extends State<CalendarShenanigan> {
   DateTime today = DateTime.now();
+  CalendarFormat _calendarFormat = CalendarFormat.month;
 
   void _onDaySelected(DateTime day, DateTime focusedDay) {
     setState(() {
@@ -212,7 +213,7 @@ class _CalendarShenaniganState extends State<CalendarShenanigan> {
               rowHeight: 60,
               headerStyle: HeaderStyle(
                 formatButtonVisible: true,
-                titleCentered: false,
+                titleCentered: true,
                 titleTextStyle: TextStyle(color: Color(0xFFFEFFFF)),
                 formatButtonTextStyle: TextStyle(color: Color(0xFFFEFFFF)),
                 formatButtonDecoration: BoxDecoration(
@@ -251,6 +252,12 @@ class _CalendarShenaniganState extends State<CalendarShenanigan> {
               firstDay: DateTime.utc(2010, 10, 16),
               lastDay: DateTime.utc(2030, 3, 14),
               onDaySelected: _onDaySelected,
+              calendarFormat: _calendarFormat,
+              onFormatChanged: (format) {
+                setState(() {
+                  _calendarFormat = format;
+                });
+              },
             ),
           ),
         ],
