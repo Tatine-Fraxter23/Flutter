@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import "package:flutter_svg/flutter_svg.dart";
-import 'package:my_app/services/event.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 class Event {
@@ -447,7 +446,7 @@ class _CalendarShenaniganState extends State<CalendarShenanigan> {
                             ),
                             SizedBox(height: 4),
                             Transform.translate(
-                              offset: Offset(0, -18.0), // Adjusted offset
+                              offset: Offset(0, -18.0),
                               child: Container(
                                 width: 40,
                                 height: 40,
@@ -490,7 +489,7 @@ class _CalendarShenaniganState extends State<CalendarShenanigan> {
                               itemCount: value.length,
                               separatorBuilder:
                                   (context, index) => Divider(
-                                    color: Color(0xFFFEFFFF),
+                                    color: Color(0xFFFEFFFF).withOpacity(0.8),
                                     height: 1,
                                   ),
                               itemBuilder: (context, index) {
@@ -536,6 +535,36 @@ class _CalendarShenaniganState extends State<CalendarShenanigan> {
                                               ),
                                             ),
                                           ],
+                                        ),
+                                      ),
+                                      SizedBox(width: 8),
+                                      GestureDetector(
+                                        onTap: () {
+                                          setState(() {
+                                            final selectedDateEvents =
+                                                widget.events[widget
+                                                    .selectedDay];
+                                            if (selectedDateEvents != null) {
+                                              selectedDateEvents.removeAt(
+                                                index,
+                                              );
+                                              if (selectedDateEvents.isEmpty) {
+                                                widget.events.remove(
+                                                  widget.selectedDay,
+                                                );
+                                              }
+                                              widget
+                                                  .selectedEvents
+                                                  .value = _getEventsForDay(
+                                                widget.selectedDay,
+                                              );
+                                            }
+                                          });
+                                        },
+                                        child: Icon(
+                                          Icons.close,
+                                          color: Colors.grey,
+                                          size: 20,
                                         ),
                                       ),
                                     ],
